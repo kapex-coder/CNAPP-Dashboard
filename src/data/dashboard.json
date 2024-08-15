@@ -1,0 +1,54 @@
+[
+    {
+        "id": "1",
+        "title": "CSPM Executive Dashboard",
+        "category": "CSPM",
+        "widgets": [
+            {
+                "id": "1",
+                "title": "Cloud Accounts",
+                "status": "active",
+                "data": {
+                    "connected": 2,
+                    "not_connected": 2,
+                    "failed": 0,
+                    "warning": 0,
+                    "not_available": 0,
+                    "passed": 0
+                }
+            },
+            {
+                "id": "2",
+                "title": "Cloud Account Risk Assessment",
+                "status": "active",
+                "data": {
+                    "connected": 0,
+                    "not_connected": 0,
+                    "failed": 1689,
+                    "warning": 681,
+                    "not_available": 36,
+                    "passed": 7253
+                }
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "CWPP Dashboard",
+        "category": "CWPP",
+        "widgets": [
+            {
+                "id": "1",
+                "title": "Top 5 Namespace Specific Alerts",
+                "status": "active",
+                "data": {}
+            },
+            {
+                "id": "2",
+                "title": "Workload Alerts",
+                "status": "active",
+                "data": {}
+            }
+        ]
+    }
+]

@@ -7,6 +7,7 @@ import { grey } from "@mui/material/colors";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import DashboardCategory from "./Category";
 import Drawer from "@mui/material/Drawer";
 import FormControl from "@mui/material/FormControl";
 import IconButton from "@mui/material/IconButton";
@@ -85,6 +86,7 @@ export default function Dashboard() {
               </FormControl>
             </Stack>
           </Box>
+          <DashboardCategory />
         </Container>
       </Box>
     </>

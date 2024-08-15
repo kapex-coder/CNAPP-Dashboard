@@ -6,8 +6,9 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Container from "@mui/material/Container";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
 // Icons
 import SearchIcon from "@mui/icons-material/Search";
@@ -88,7 +89,7 @@ export default function Navigation() {
           aria-label="breadcrumb">
           {breadcrumbs}
         </Breadcrumbs>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+        <Stack spacing={2} direction="row">
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -104,7 +105,7 @@ export default function Navigation() {
           <IconButton>
             <AccountCircleOutlinedIcon />
           </IconButton>
-        </Box>
+        </Stack>
       </Container>
     </Box>
   );

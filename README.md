@@ -1,2 +1,2 @@
-# Dashboard
+# CNAPP Dashboard
 

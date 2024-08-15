@@ -1,11 +1,12 @@
-import './App.css'
+import "./App.css";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <>
-      Frontend Project
+      <Navigation />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

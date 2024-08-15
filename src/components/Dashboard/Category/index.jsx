@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Components
@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Widget from "../Widget";
+import WidgetModal from "../Widget/Modal";
 
 // Icons
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
@@ -15,6 +16,11 @@ import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 export default function Category() {
   const dasboardData = useSelector((state) => state.dashboard);
 
+  const [openAddWidgetModal, setAddWidgetModal] = useState(false);
+
+  const handleAddWidgetModalOpen = () => setAddWidgetModal(true);
+
+  //   Debug code need to remove this
   console.log("dasboardData ---> ", dasboardData);
 
   return (
@@ -46,10 +52,16 @@ export default function Category() {
                 sm={6}
                 md={4}>
                 <Card>
-                  <CardContent sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <CardContent
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}>
                     <Button
                       variant="outlined"
-                      startIcon={<AddOutlinedIcon />}>
+                      startIcon={<AddOutlinedIcon />}
+                      onClick={handleAddWidgetModalOpen}>
                       Add widget
                     </Button>
                   </CardContent>
@@ -59,6 +71,11 @@ export default function Category() {
           </React.Fragment>
         );
       })}
+
+      <WidgetModal
+        open={openAddWidgetModal}
+        setAddWidgetModal={setAddWidgetModal}
+      />
     </>
   );
 }

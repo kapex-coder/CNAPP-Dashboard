@@ -22,11 +22,20 @@ import LoopOutlinedIcon from "@mui/icons-material/LoopOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 
 export default function Dashboard() {
-    const [days, setDays] = useState(2);
+  const [days, setDays] = useState(2);
+  const [addWidgetDrawer, setAddWidgetDrawer] = useState(false);
 
   const handleDaysChange = (event) => {
     setDays(event.target.value);
   };
+
+  const handleAddWidgetDrawerOpen = () => {
+    setAddWidgetDrawer(true);
+  }
+
+  const handleAddWidgetDrawerClose = () => {
+    setAddWidgetDrawer(false);
+  }
 
   return (
     <>
@@ -53,9 +62,18 @@ export default function Dashboard() {
               direction="row">
               <Button
                 variant="outlined"
+                onClick={handleAddWidgetDrawerOpen}
                 endIcon={<AddOutlinedIcon />}>
                 Add widget
               </Button>
+              <Drawer
+                anchor='right'
+                open={addWidgetDrawer}
+                onClose={handleAddWidgetDrawerClose}>
+                <Typography variant="h6" gutterBottom>
+                  Add widget
+                </Typography>
+              </Drawer>
               <IconButton
                 sx={{
                   border: "1px solid rgba(0, 0, 0, 0.3)",

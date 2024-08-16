@@ -15,6 +15,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
+// Colors
+import { grey, indigo } from "@mui/material/colors";
+
 // Search Input Style
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -67,7 +70,7 @@ export default function Navigation() {
     </Link>,
     <Typography
       key="2"
-      color="text.primary">
+      sx={{ fontSize: "0.925rem", fontWeight: "700", color: indigo[700] }}>
       Dashboard V2
     </Typography>,
   ];
@@ -75,7 +78,7 @@ export default function Navigation() {
   return (
     <Box
       component="header"
-      sx={{ padding: "0.5rem 1rem" }}>
+      sx={{ padding: "0.25rem 1rem", backgroundColor: grey["A100"] }}>
       <Container
         component="nav"
         sx={{
@@ -86,10 +89,13 @@ export default function Navigation() {
         <Breadcrumbs
           separator="›"
           component="div"
+          sx={{ fontSize: "0.875rem" }}
           aria-label="breadcrumb">
           {breadcrumbs}
         </Breadcrumbs>
-        <Stack spacing={2} direction="row">
+        <Stack
+          spacing={2}
+          direction="row">
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -99,10 +105,10 @@ export default function Navigation() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          <IconButton>
+          <IconButton aria-label="notification">
             <NotificationsActiveOutlinedIcon />
           </IconButton>
-          <IconButton>
+          <IconButton aria-label="user">
             <AccountCircleOutlinedIcon />
           </IconButton>
         </Stack>

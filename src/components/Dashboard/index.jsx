@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-// Colors
-import { grey } from "@mui/material/colors";
-
 // Components
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -31,20 +28,15 @@ export default function Dashboard() {
 
   const handleAddWidgetDrawerOpen = () => {
     setAddWidgetDrawer(true);
-  }
+  };
 
   const handleAddWidgetDrawerClose = () => {
     setAddWidgetDrawer(false);
-  }
+  };
 
   return (
     <>
-      <Box
-        sx={{
-          padding: "0.5rem 1rem",
-          backgroundColor: grey[300],
-          minHeight: "100%",
-        }}>
+      <Box sx={{ padding: "0.5rem 1rem" }}>
         <Container>
           <Box
             sx={{
@@ -67,10 +59,12 @@ export default function Dashboard() {
                 Add widget
               </Button>
               <Drawer
-                anchor='right'
+                anchor="right"
                 open={addWidgetDrawer}
                 onClose={handleAddWidgetDrawerClose}>
-                <Typography variant="h6" gutterBottom>
+                <Typography
+                  variant="h6"
+                  gutterBottom>
                   Add widget
                 </Typography>
               </Drawer>

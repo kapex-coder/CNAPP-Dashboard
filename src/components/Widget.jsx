@@ -9,7 +9,7 @@ export default function Widget({children, widget}) {
       <Card sx={{height: "100%"}}>
         <CardContent>
           <Typography>
-            {widget.title}
+            {widget.name}
           </Typography>
           {children}
         </CardContent>

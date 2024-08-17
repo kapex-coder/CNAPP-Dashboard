@@ -8,6 +8,9 @@ import AddWidgetDrawer from "./Drawers/AddWidgetDrawer";
 
 export default function DashboardCategory({ category = null }) {
 
+  console.log("category --> ", category);
+  
+
   return (
     <Box sx={{ padding: "1rem 0" }}>
       {category && 
@@ -15,7 +18,7 @@ export default function DashboardCategory({ category = null }) {
         <Typography
         variant="subtitle2"
         component="h2">
-        {category.title}
+        {category.name}
       </Typography>
       <Grid
         container

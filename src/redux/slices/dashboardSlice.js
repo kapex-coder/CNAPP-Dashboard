@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import initialState from "../../data/dashboard.json";
+import initialState from "../../data/categories.json";
 
 export const dashboardSlice = createSlice({
   name: 'widgets',

@@ -9,7 +9,7 @@ import Drawer from "@mui/material/Drawer";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Widget from "./Widget";
-import CspmPieChart from "../Charts/CspmPieChart";
+import CspmPieChart from "./Charts/CspmPieChart";
 
 
 // Icons

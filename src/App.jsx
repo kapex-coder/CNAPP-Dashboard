@@ -2,17 +2,14 @@
 import "./App.css";
 
 // Components
-import Box from "@mui/material/Box";
-import Dashboard from "./components/Dashboard";
 import Header from "./components/Header";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
     <>
-      <Box>
-        <Header />
-        <Dashboard />
-      </Box>
+      <Header />
+      <Dashboard />
     </>
   );
 }

@@ -4,7 +4,6 @@ const initialState = {
     value: {
         id: crypto.randomUUID(),
         name: "",
-        lastName: "",
         chartData: []
     }
 }
@@ -13,7 +12,7 @@ const getChartFields = () => ({
     id: crypto.randomUUID(),
     label: "",
     value: "",
-    color: ""
+    color: "#00000"
 })
 
 export const widgetFormSlice = createSlice({
@@ -43,6 +42,6 @@ export const widgetFormSlice = createSlice({
     },
 });
 
-export const { addChartFields, updatedFieldValue, resetWidgetFormState } = widgetFormSlice.actions;
+export const { addChartFields, updatedFieldValue, updateChartField, resetWidgetFormState } = widgetFormSlice.actions;
 
 export default widgetFormSlice.reducer;

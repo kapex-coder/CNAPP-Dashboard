@@ -15,10 +15,20 @@ export const categoriesSlice = createSlice({
             if (category) {
                 category.widgets.push({id: crypto.randomUUID(), ...widget});
             }
+        },
+        removeWidget: (state, action) => {
+            const { categoryId, widgetId } = action.payload;
+            const category = state.value.find(cat => cat.id === categoryId);
+            if (category) {
+                const widgetIndex = category.widgets.findIndex(widget => widget.id === widgetId);
+                if (widgetIndex !== -1) {
+                    category.widgets.splice(widgetIndex, 1);
+                }
+            }
         }
     }
 })
 
-export const { } = categoriesSlice.actions
+export const { addWidget, removeWidget } = categoriesSlice.actions
 
 export default categoriesSlice.reducer

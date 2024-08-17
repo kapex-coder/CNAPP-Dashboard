@@ -50,7 +50,7 @@ export default function DashboardCategory({ category = null }) {
                 height: "100%",
               }}>
               <AddWidgetDrawer>
-                <AddWidgetForm />
+                <AddWidgetForm categoryId={category.id} />
               </AddWidgetDrawer>
             </CardContent>
           </Card>

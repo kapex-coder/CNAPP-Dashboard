@@ -5,6 +5,7 @@ import Widget from "./Widget";
 import CspmPieChart from "./Charts/CspmPieChart";
 import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import AddWidgetDrawer from "./Drawers/AddWidgetDrawer";
+import AddWidgetForm from "./Forms/AddWidgetForm";
 
 export default function DashboardCategory({ category = null }) {
 
@@ -48,7 +49,9 @@ export default function DashboardCategory({ category = null }) {
                 justifyContent: "center",
                 height: "100%",
               }}>
-              <AddWidgetDrawer />
+              <AddWidgetDrawer>
+                <AddWidgetForm />
+              </AddWidgetDrawer>
             </CardContent>
           </Card>
         </Grid>

@@ -1,12 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import dashboardSlice from "./slices/dashboardSlice";
-import cspmFormSlice from "./slices/cspmFormSlice";
+import { configureStore } from '@reduxjs/toolkit';
 import categoriesSlice from "./slices/categoriesSlice";
+import widgetFormSlice from "./slices/widgetFormSlice";
 
 export default configureStore({
   reducer: {
-    dashboard: dashboardSlice,
-    cspmForm: cspmFormSlice,
-    categories: categoriesSlice
+    categories: categoriesSlice,
+    widgetForm: widgetFormSlice
   }
 })

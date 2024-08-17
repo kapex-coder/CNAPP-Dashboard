@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { resetWidgetFormState } from "../../redux/slices/widgetFormSlice";
 
 import { Box, Button, Drawer, Typography } from "@mui/material";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
@@ -13,12 +15,14 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 function AddWidgetDrawer({ children }) {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const handleOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
+    dispatch(resetWidgetFormState())
     setOpen(false);
   };
   return (

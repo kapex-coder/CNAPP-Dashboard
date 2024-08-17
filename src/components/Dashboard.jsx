@@ -5,7 +5,7 @@ import DashboardOptions from "./DashboardOptions";
 import { Container } from "@mui/material";
 
 export default function Dashboard() {
-  const categories = useSelector((state) => state.categories.categories);
+  const categories = useSelector((state) => state.categories.value);
 
   return (
     <Container

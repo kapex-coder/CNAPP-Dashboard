@@ -12,27 +12,27 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 }));
 
 function AddWidgetDrawer({ children }) {
-  const [addWidgetDrawer, setAddWidgetDrawer] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const handleAddWidgetDrawerOpen = () => {
-    setAddWidgetDrawer(true);
+  const handleOpen = () => {
+    setOpen(true);
   };
 
-  const handleAddWidgetDrawerClose = () => {
-    setAddWidgetDrawer(false);
+  const handleClose = () => {
+    setOpen(false);
   };
   return (
     <>
       <Button
         variant="outlined"
         startIcon={<AddOutlinedIcon />}
-        onClick={handleAddWidgetDrawerOpen}>
+        onClick={handleOpen}>
         Add widget
       </Button>
       <StyledDrawer
         anchor="right"
-        open={addWidgetDrawer}
-        onClose={handleAddWidgetDrawerClose}
+        open={open}
+        onClose={handleClose}
         sx={{ minWidth: "500px" }}>
         <Box
           sx={{
@@ -50,7 +50,7 @@ function AddWidgetDrawer({ children }) {
             gutterBottom>
             Add widget
           </Typography>
-          <CloseOutlinedIcon onClick={handleAddWidgetDrawerClose} />
+          <CloseOutlinedIcon onClick={handleClose} />
         </Box>
         {children}
       </StyledDrawer>

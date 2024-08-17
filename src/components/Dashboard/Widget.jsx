@@ -2,9 +2,8 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import CspmPieChart from "../../Charts/CspmPieChart";
 
-export default function Widget({widget}) {
+export default function Widget({children, widget}) {
   return (
     <>
       <Card sx={{height: "100%"}}>
@@ -12,7 +11,7 @@ export default function Widget({widget}) {
           <Typography>
             {widget.title}
           </Typography>
-          <CspmPieChart />
+          {children}
         </CardContent>
       </Card>
     </>

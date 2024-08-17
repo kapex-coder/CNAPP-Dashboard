@@ -8,8 +8,9 @@ import CardContent from "@mui/material/CardContent";
 import Drawer from "@mui/material/Drawer";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Widget from "../Widget";
-import WidgetModal from "../Widget/Modal";
+import Widget from "./Widget";
+import CspmPieChart from "../Charts/CspmPieChart";
+
 
 // Icons
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
@@ -17,10 +18,7 @@ import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 export default function Category() {
   const dasboardData = useSelector((state) => state.dashboard);
 
-  const [openAddWidgetModal, setAddWidgetModal] = useState(false);
   const [addWidgetDrawer, setAddWidgetDrawer] = useState(false);
-
-  const handleAddWidgetModalOpen = () => setAddWidgetModal(true);
 
   const handleAddWidgetDrawerOpen = () => {
     setAddWidgetDrawer(true);
@@ -53,7 +51,9 @@ export default function Category() {
                   sm={6}
                   md={4}
                   key={widget.id}>
-                  <Widget widget={widget} />
+                  <Widget widget={widget}>
+                    <CspmPieChart />
+                  </Widget>
                 </Grid>
               ))}
               <Grid
@@ -92,11 +92,6 @@ export default function Category() {
           </React.Fragment>
         );
       })}
-
-      <WidgetModal
-        open={openAddWidgetModal}
-        setAddWidgetModal={setAddWidgetModal}
-      />
     </>
   );
 }

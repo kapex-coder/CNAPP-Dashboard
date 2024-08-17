@@ -4,13 +4,13 @@ import "./App.css";
 // Components
 import Box from "@mui/material/Box";
 import Dashboard from "./components/Dashboard";
-import Navigation from "./components/Navigation";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <Box>
-        <Navigation />
+        <Header />
         <Dashboard />
       </Box>
     </>

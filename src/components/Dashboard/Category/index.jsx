@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import Drawer from "@mui/material/Drawer";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Widget from "../Widget";
@@ -17,8 +18,17 @@ export default function Category() {
   const dasboardData = useSelector((state) => state.dashboard);
 
   const [openAddWidgetModal, setAddWidgetModal] = useState(false);
+  const [addWidgetDrawer, setAddWidgetDrawer] = useState(false);
 
   const handleAddWidgetModalOpen = () => setAddWidgetModal(true);
+
+  const handleAddWidgetDrawerOpen = () => {
+    setAddWidgetDrawer(true);
+  };
+
+  const handleAddWidgetDrawerClose = () => {
+    setAddWidgetDrawer(false);
+  };
 
   //   Debug code need to remove this
   console.log("dasboardData ---> ", dasboardData);
@@ -62,9 +72,19 @@ export default function Category() {
                     <Button
                       variant="outlined"
                       startIcon={<AddOutlinedIcon />}
-                      onClick={handleAddWidgetModalOpen}>
+                      onClick={handleAddWidgetDrawerOpen}>
                       Add widget
                     </Button>
+                    <Drawer
+                      anchor="right"
+                      open={addWidgetDrawer}
+                      onClose={handleAddWidgetDrawerClose}>
+                      <Typography
+                        variant="h6"
+                        gutterBottom>
+                        Add widget
+                      </Typography>
+                    </Drawer>
                   </CardContent>
                 </Card>
               </Grid>

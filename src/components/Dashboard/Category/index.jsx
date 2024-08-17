@@ -51,12 +51,13 @@ export default function Category() {
                 xs={12}
                 sm={6}
                 md={4}>
-                <Card>
+                <Card sx={{ height: "100%" }}>
                   <CardContent
                     sx={{
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      height: "100%",
                     }}>
                     <Button
                       variant="outlined"

@@ -81,6 +81,7 @@ export default function Navigation() {
       sx={{ padding: "0.25rem 1rem", backgroundColor: grey["A100"] }}>
       <Container
         component="nav"
+        maxWidth={false}
         sx={{
           display: "flex",
           alignItems: "center",

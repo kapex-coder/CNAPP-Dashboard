@@ -37,7 +37,7 @@ export default function Dashboard() {
   return (
     <>
       <Box sx={{ padding: "0.5rem 1rem" }}>
-        <Container>
+        <Container maxWidth={false}>
           <Box
             sx={{
               display: "flex",

@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-// Components
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Drawer from "@mui/material/Drawer";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import Widget from "./Widget";
 import CspmPieChart from "./Charts/CspmPieChart";
-
-
-// Icons
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Drawer,
+  Grid,
+  Typography,
+} from "@mui/material";
 
-export default function Category() {
+export default function DashboardCategory() {
   const dasboardData = useSelector((state) => state.dashboard);
 
   const [addWidgetDrawer, setAddWidgetDrawer] = useState(false);
@@ -32,7 +31,7 @@ export default function Category() {
   console.log("dasboardData ---> ", dasboardData);
 
   return (
-    <>
+    <Box sx={{padding: "1rem 0"}}>
       {dasboardData.map((category) => {
         return (
           <React.Fragment key={category.id}>
@@ -92,6 +91,6 @@ export default function Category() {
           </React.Fragment>
         );
       })}
-    </>
+    </Box>
   );
 }

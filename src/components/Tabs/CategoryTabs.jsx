@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { updateCategories } from "../../redux/slices/categoriesSlice";
@@ -21,10 +21,10 @@ function CustomTabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
+      id={`categories-tabpanel-${index}`}
+      aria-labelledby={`categories-tab-${index}`}
       {...other}>
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ marginBottom: "0.6rem" }}>{children}</Box>}
     </div>
   );
 }
@@ -37,8 +37,8 @@ CustomTabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    id: `categories-tab-${index}`,
+    "aria-controls": `categories-tabpanel-${index}`,
   };
 }
 
@@ -55,7 +55,7 @@ export default function CategoryTabs({ handleClose }) {
   const handleSubmit = () => {
     dispatch(updateCategories({ categories }));
     handleClose();
-  }
+  };
 
   const updateWidgetIsActive = ({ category, widgetId }) => {
     const updatedWidgets = category.widgets.map((widget) => {
@@ -72,12 +72,18 @@ export default function CategoryTabs({ handleClose }) {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box
+      sx={{
+        width: "100%",
+        flexGrow: 1,
+        display: "flex",
+        flexDirection: "column",
+      }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example">
+          aria-label="categories tabs">
           {categories.map((category) => (
             <Tab
               label={category.category}
@@ -87,35 +93,43 @@ export default function CategoryTabs({ handleClose }) {
           ))}
         </Tabs>
       </Box>
-      {categories.map((category, index) => {
-        return category.widgets.map((widget) => (
-          <CustomTabPanel
-            key={widget.id}
-            value={value}
-            index={index}>
-            <FormGroup>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={widget.isActive}
-                    onChange={() =>
-                      updateWidgetIsActive({ category, widgetId: widget.id })
-                    }
-                  />
-                }
-                label={widget.name}
-              />
-            </FormGroup>
-          </CustomTabPanel>
-        ));
-      })}
+      <Box sx={{padding: "1rem"}}>
+        {categories.map((category, index) => {
+          return category.widgets.map((widget) => (
+            <CustomTabPanel
+              key={widget.id}
+              value={value}
+              index={index}>
+              <FormGroup
+                sx={{
+                  padding: "0.25rem 0.5rem",
+                  border: "1px solid rgba(0, 0, 0, 0.4)",
+                  borderRadius: "0.25rem",
+                }}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{ padding: "0 0.5rem" }}
+                      checked={widget.isActive}
+                      onChange={() =>
+                        updateWidgetIsActive({ category, widgetId: widget.id })
+                      }
+                    />
+                  }
+                  label={widget.name}
+                />
+              </FormGroup>
+            </CustomTabPanel>
+          ));
+        })}
+      </Box>
       <Stack
         direction="row"
         gap={1}
         justifyContent="end"
         sx={{ marginTop: "auto" }}>
         <Button
-          variant="contained"
+          variant="outlined"
           onClick={handleClose}>
           Cancel
         </Button>

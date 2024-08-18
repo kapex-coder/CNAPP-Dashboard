@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Button, Drawer, Stack, Typography } from "@mui/material";
 import CategoryTabs from "../Tabs/CategoryTabs";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
@@ -61,12 +61,11 @@ function AddWidgetDrawer() {
           </Typography>
           <CloseOutlinedIcon onClick={handleClose} />
         </Box>
-        <Box sx={{ padding: "1rem" }}>
+        <Box sx={{ padding: "1rem", flexGrow: 1, display: "flex", flexDirection: "column" }}>
           <Typography
-            variant="h6"
             sx={{ margin: "0" }}
             gutterBottom>
-            Add widget
+            Personalise your dashboard by adding the following widget
           </Typography>
           <CategoryTabs handleClose={handleClose} />
         </Box>

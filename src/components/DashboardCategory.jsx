@@ -11,7 +11,7 @@ export default function DashboardCategory({ category = null }) {
           <Typography
             variant="subtitle1"
             component="h2"
-            sx={{paddingBottom: "0.35rem"}}>
+            sx={{ paddingBottom: "0.35rem" }}>
             {category.name}
           </Typography>
           <Grid
@@ -24,7 +24,9 @@ export default function DashboardCategory({ category = null }) {
                 sm={6}
                 md={4}
                 key={widget.id}>
-                <Widget categoryId={category.id} widget={widget}>
+                <Widget
+                  categoryId={category.id}
+                  widget={widget}>
                   <DonutChart data={widget.chartData} />
                 </Widget>
               </Grid>
@@ -34,7 +36,12 @@ export default function DashboardCategory({ category = null }) {
               xs={12}
               sm={6}
               md={4}>
-              <Card sx={{ height: "100%", minHeight: "200px" }}>
+              <Card
+                sx={{
+                  height: "100%",
+                  minHeight: "200px",
+                  backgroundColor: "#f5f5f5",
+                }}>
                 <CardContent
                   sx={{
                     display: "flex",

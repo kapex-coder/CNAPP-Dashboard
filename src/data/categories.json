@@ -7,22 +7,39 @@
             {
                 "id": 1,
                 "isActive": true,
-                "name": "CSPM Widget 1",
+                "name": "Cloud Accounts",
                 "chartData": [
                     { "id": 1, "label": "Connected", "value": 2, "color": "#03a9f4"},
                     { "id": 2, "label": "Not Connected", "value": 2, "color": "#e3f2fd"}
+                ]
+            },
+            {
+                "id": 2,
+                "isActive": true,
+                "name": "Cloud Account Risk Assesment",
+                "chartData": [
+                    { "id": 1, "label": "Failed", "value": 1689, "color": "#d50000"},
+                    { "id": 2, "label": "Warning", "value": 681, "color": "#ffeb3b"},
+                    { "id": 3, "label": "Not available", "value": 36, "color": "#bdbdbd"},
+                    { "id": 4, "label": "Passed", "value": 7253, "color": "#4caf50"}
                 ]
             }
         ]
     },
     {
         "id": "2",
-        "name": "CSPM Executive Dashboard",
+        "name": "CWPP Dashboard:",
         "category": "CWPP",
         "widgets": [
             {
                 "id": 1,
-                "name": "CWPP Widget 1",
+                "name": "Top 5 Namespace Specific Alerts",
+                "isActive": true,
+                "chartData": []
+            },
+            {
+                "id": 2,
+                "name": "Workload Alerts",
                 "isActive": true,
                 "chartData": []
             }

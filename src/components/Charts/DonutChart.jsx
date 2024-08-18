@@ -51,8 +51,6 @@ export default function DonutChart({ data = defaultChartData }) {
                 data: chartData,
                 innerRadius: 50,
                 outerRadius: 70,
-                startAngle: -180,
-                endAngle: 360,
                 cx: 70,
               },
             ]}

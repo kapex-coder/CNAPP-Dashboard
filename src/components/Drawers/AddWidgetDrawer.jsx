@@ -13,6 +13,15 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   },
 }));
 
+const StyledButton = styled(Button)(({theme}) => ({
+  color: "grey",
+  border: "1px solid rgba(0, 0, 0, 0.4)",
+  "&:hover": {
+    border: "1px solid rgba(0, 0, 0, 0.4)",
+    backgroundColor: "1px solid rgba(0, 0, 0, 0.2)",
+  }
+}))
+
 function AddWidgetDrawer({ categoryId }) {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
@@ -28,12 +37,12 @@ function AddWidgetDrawer({ categoryId }) {
 
   return (
     <>
-      <Button
+      <StyledButton
         variant="outlined"
         startIcon={<AddOutlinedIcon />}
         onClick={handleOpen}>
         Add widget
-      </Button>
+      </StyledButton>
       <StyledDrawer
         anchor="right"
         open={open}

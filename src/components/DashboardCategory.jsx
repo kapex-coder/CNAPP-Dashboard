@@ -34,7 +34,7 @@ export default function DashboardCategory({ category = null }) {
               xs={12}
               sm={6}
               md={4}>
-              <Card sx={{ height: "100%" }}>
+              <Card sx={{ height: "100%", minHeight: "200px" }}>
                 <CardContent
                   sx={{
                     display: "flex",

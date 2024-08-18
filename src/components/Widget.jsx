@@ -17,9 +17,9 @@ export default function Widget({ children, widget, categoryId }) {
         <CardContent>
           <Stack
             direction="row"
-            sx={{ justifyContent: "space-between" }}>
+            sx={{ justifyContent: "space-between", alignItems: "center" }}>
             <Typography>{widget.name}</Typography>
-            <IconButton onClick={handleRemove}>
+            <IconButton size="small" onClick={handleRemove}>
               <CloseOutlinedIcon  />
             </IconButton>
           </Stack>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Children, cloneElement } from "react";
 import { useDispatch } from "react-redux";
 import { resetWidgetFormState } from "../../redux/slices/widgetFormSlice";
 
@@ -22,7 +22,7 @@ function AddWidgetDrawer({ children }) {
   };
 
   const handleClose = () => {
-    dispatch(resetWidgetFormState())
+    dispatch(resetWidgetFormState());
     setOpen(false);
   };
   return (

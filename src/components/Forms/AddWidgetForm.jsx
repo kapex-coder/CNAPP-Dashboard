@@ -75,7 +75,7 @@ function AddWidgetForm({categoryId}) {
                 size="small"
                 placeholder="Enter value..."
                 variant="outlined"
-                onChange={(e) => handleChartFieldInputChange({chartFieldId: field.id, key: "value", value: e.target.value})}
+                onChange={(e) => handleChartFieldInputChange({chartFieldId: field.id, key: "value", value: parseInt(e.target.value)})}
               />
               <TextField
                 type="color"

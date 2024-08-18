@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import Widget from "./Widget";
-import CspmPieChart from "./Charts/CspmPieChart";
+import DonutChart from "./Charts/DonutChart";
 import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import AddWidgetDrawer from "./Drawers/AddWidgetDrawer";
 import AddWidgetForm from "./Forms/AddWidgetForm";
@@ -32,7 +32,7 @@ export default function DashboardCategory({ category = null }) {
             md={4}
             key={widget.id}>
             <Widget widget={widget}>
-              <CspmPieChart />
+              <DonutChart data={widget.chartData} />
             </Widget>
           </Grid>
         ))}

@@ -9,9 +9,10 @@ import { updateSearchValue } from "../redux/slices/searchSlice";
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    fontSize: "1rem",
+    backgroundColor: alpha("#cfd8dc", 0.5),
     "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+      backgroundColor: alpha("#cfd8dc", 0.75),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -41,7 +42,7 @@ const Search = styled("div")(({ theme }) => ({
       transition: theme.transitions.create("width"),
       width: "100%",
       [theme.breakpoints.up("md")]: {
-        width: "20ch",
+        width: "30ch",
       },
     },
   }));
@@ -53,7 +54,7 @@ function SearchInput() {
   return (
     <Search>
       <SearchIconWrapper>
-        <SearchIcon />
+        <SearchIcon sx={{width: "1.15rem"}} />
       </SearchIconWrapper>
       <StyledInputBase
        value={searchValue}

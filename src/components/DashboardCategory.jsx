@@ -17,7 +17,7 @@ export default function DashboardCategory({ category = null }) {
           <Grid
             container
             spacing={{ xs: 1, md: 2 }}>
-            {category.widgets.map((widget) => (
+            {category.widgets.map((widget) => widget.isActive && (
               <Grid
                 item
                 xs={12}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { updateCategories } from "../../redux/slices/categoriesSlice";
 import {
   Box,
@@ -12,7 +12,6 @@ import {
   FormGroup,
   FormControlLabel,
 } from "@mui/material";
-import { useSelector } from "react-redux";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -137,7 +136,7 @@ export default function CategoryTabs({ handleClose }) {
           type="submit"
           variant="contained"
           onClick={handleSubmit}>
-          Add Widget
+          Submit
         </Button>
       </Stack>
     </Box>

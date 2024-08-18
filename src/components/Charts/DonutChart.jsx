@@ -63,7 +63,7 @@ export default function DonutChart({ data = defaultChartData }) {
               left: 55,
               textAlign: "center",
             }}>
-            <p>{totalDataValue}</p>
+            <strong>{totalDataValue}</strong>
             <p>Total</p>
           </Box>
         </Box>

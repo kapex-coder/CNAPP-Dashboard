@@ -53,10 +53,10 @@ export default function Header() {
           spacing={1}
           direction="row">
           <SearchInput />
-          <IconButton size="small" aria-label="notification">
+          <IconButton aria-label="notification">
             <NotificationsActiveOutlinedIcon />
           </IconButton>
-          <IconButton size="small" aria-label="user">
+          <IconButton aria-label="user">
             <AccountCircleOutlinedIcon />
           </IconButton>
         </Stack>

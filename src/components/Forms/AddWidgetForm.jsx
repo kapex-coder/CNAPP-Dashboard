@@ -52,7 +52,7 @@ function AddWidgetForm({ categoryId, handleClose }) {
       noValidate
       autoComplete="off">
       <Box sx={{marginBottom: "0.6rem"}}>
-        <InputLabel htmlFor="name">Name:</InputLabel>
+        <InputLabel htmlFor="name" sx={{color: "#000000DE"}}>Name:</InputLabel>
         <StyledTextField
           id="name"
           sx={{width: "100%"}}

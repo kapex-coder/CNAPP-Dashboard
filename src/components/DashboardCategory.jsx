@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-
 import Widget from "./Widget";
 import DonutChart from "./Charts/DonutChart";
 import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
@@ -12,8 +9,9 @@ export default function DashboardCategory({ category = null }) {
       {category && (
         <>
           <Typography
-            variant="subtitle2"
-            component="h2">
+            variant="subtitle1"
+            component="h2"
+            sx={{paddingBottom: "0.35rem"}}>
             {category.name}
           </Typography>
           <Grid

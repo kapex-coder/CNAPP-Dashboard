@@ -9,8 +9,8 @@
                 "isActive": true,
                 "name": "CSPM Widget 1",
                 "chartData": [
-                    { "id": 1, "label": "Connected", "value": 2, "color": "blue"},
-                    { "id": 2, "label": "Not Connected", "value": 2, "color": "red"}
+                    { "id": 1, "label": "Connected", "value": 2, "color": "#03a9f4"},
+                    { "id": 2, "label": "Not Connected", "value": 2, "color": "#e3f2fd"}
                 ]
             }
         ]
@@ -24,10 +24,7 @@
                 "id": 1,
                 "name": "CWPP Widget 1",
                 "isActive": true,
-                "chartData": [
-                    { "id": 1, "label": "Connected", "value": 2, "color": "blue"},
-                    { "id": 2, "label": "Not Connected", "value": 2, "color": "red"}
-                ]
+                "chartData": []
             }
         ]
     }

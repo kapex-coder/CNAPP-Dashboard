@@ -67,7 +67,7 @@ function AddWidgetForm({categoryId, handleClose}) {
                 size="small"
                 placeholder="Enter label..."
                 variant="outlined"
-                onChange={(e) => handleChartFieldInputChange({chartFieldId: field.id, key: "label", value: e.target.value})}
+                onChange={(e) => handleChartFieldInputChange({chartFieldId: field.id, key: "label", value: e.target.value })}
               />
               <TextField
                 sx={{ width: "100%" }}

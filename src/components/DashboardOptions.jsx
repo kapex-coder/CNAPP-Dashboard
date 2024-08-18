@@ -26,10 +26,9 @@ function DashboardOptions() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "1rem 0",
       }}>
       <Typography
-        variant="subtitle1"
+        variant="h6"
         component="h1">
         CNAPP Dashboard
       </Typography>

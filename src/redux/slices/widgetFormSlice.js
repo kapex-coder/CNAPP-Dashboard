@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     value: {
         id: crypto.randomUUID(),
+        isActive: true,
         name: "",
         chartData: []
     }
@@ -10,6 +11,7 @@ const initialState = {
 
 const getChartFields = () => ({
     id: crypto.randomUUID(),
+    isActive: true,
     label: "",
     value: "",
     color: "#00000"

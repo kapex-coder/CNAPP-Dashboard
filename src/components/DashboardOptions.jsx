@@ -3,6 +3,7 @@ import { useState } from "react";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import LoopOutlinedIcon from "@mui/icons-material/LoopOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import UpdateWidgetsDrawer from "./Drawers/UpdateWidgetsDrawer";
 import {
   Box,
   FormControl,
@@ -12,7 +13,6 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import AddWidgetDrawer from "./Drawers/AddWidgetDrawer";
 
 function DashboardOptions() {
   const [days, setDays] = useState(2);
@@ -36,13 +36,7 @@ function DashboardOptions() {
       <Stack
         spacing={2}
         direction="row">
-        <AddWidgetDrawer>
-          <Typography
-            variant="subtitle1"
-            component="h1">
-            CNAPP Dashboard
-          </Typography>
-        </AddWidgetDrawer>
+        <UpdateWidgetsDrawer />
         <IconButton
           sx={{
             border: "1px solid rgba(0, 0, 0, 0.3)",

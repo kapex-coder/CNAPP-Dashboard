@@ -4,7 +4,6 @@ import {
   addChartFields,
   updatedFieldValue,
   updateChartField,
-  resetWidgetFormState,
 } from "../../redux/slices/widgetFormSlice";
 import { addWidget } from "../../redux/slices/categoriesSlice";
 import {
@@ -16,7 +15,7 @@ import {
   Typography,
 } from "@mui/material";
 
-function AddWidgetForm({categoryId}) {
+function AddWidgetForm({categoryId, handleClose}) {
   const widgetFormData = useSelector((state) => state.widgetForm.value);
   const dispatch = useDispatch();
 
@@ -31,7 +30,7 @@ function AddWidgetForm({categoryId}) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     dispatch(addWidget({categoryId, widget: widgetFormData }));
-    dispatch(resetWidgetFormState());
+    handleClose();
   }
 
   return (
@@ -99,7 +98,7 @@ function AddWidgetForm({categoryId}) {
         sx={{ marginTop: "auto" }}>
         <Button
           variant="contained"
-          onClick={() => dispatch(resetWidgetFormState())}>
+          onClick={handleClose}>
           Cancel
         </Button>
         <Button type="submit" variant="contained">Add Widget</Button>

@@ -1,8 +1,8 @@
-import { useState, Children, cloneElement } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { resetWidgetFormState } from "../../redux/slices/widgetFormSlice";
-
 import { Box, Button, Drawer, Typography } from "@mui/material";
+import AddWidgetForm from "../Forms/AddWidgetForm";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { styled } from "@mui/material/styles";
@@ -13,7 +13,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   },
 }));
 
-function AddWidgetDrawer({ children }) {
+function AddWidgetDrawer({ categoryId }) {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -25,6 +25,7 @@ function AddWidgetDrawer({ children }) {
     dispatch(resetWidgetFormState());
     setOpen(false);
   };
+
   return (
     <>
       <Button
@@ -56,7 +57,7 @@ function AddWidgetDrawer({ children }) {
           </Typography>
           <CloseOutlinedIcon onClick={handleClose} />
         </Box>
-        {children}
+        <AddWidgetForm categoryId={categoryId} handleClose={handleClose} />
       </StyledDrawer>
     </>
   );

@@ -12,5 +12,19 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "2",
+        "name": "CSPM Executive Dashboard",
+        "widgets": [
+            {
+                "id": 1,
+                "name": "Widget 1",
+                "chartData": [
+                    { "id": 1, "label": "Connected", "value": 2, "color": "blue"},
+                    { "id": 2, "label": "Not Connected", "value": 2, "color": "red"}
+                ]
+            }
+        ]
     }
 ]

@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <Box
       component="header"
-      sx={{ padding: "0.25rem 0", backgroundColor: grey["A100"] }}>
+      sx={{ padding: "0.25rem 0", backgroundColor: grey["A100"], position: "sticky", top: 0, zIndex: 100 }}>
       <Container
         component="nav"
         maxWidth="xl"

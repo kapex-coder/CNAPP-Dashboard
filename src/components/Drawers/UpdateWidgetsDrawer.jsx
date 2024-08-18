@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { Box, Button, Drawer, Typography } from "@mui/material";
+import { Box, Button, Drawer, Stack, Typography } from "@mui/material";
 import CategoryTabs from "../Tabs/CategoryTabs";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
@@ -53,14 +52,14 @@ function AddWidgetDrawer() {
           </Typography>
           <CloseOutlinedIcon onClick={handleClose} />
         </Box>
-        <Box sx={{padding: "1rem"}}>
+        <Box sx={{ padding: "1rem" }}>
           <Typography
             variant="h6"
             sx={{ margin: "0" }}
             gutterBottom>
             Add widget
           </Typography>
-          <CategoryTabs />
+          <CategoryTabs handleClose={handleClose} />
         </Box>
       </StyledDrawer>
     </>

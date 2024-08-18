@@ -25,10 +25,14 @@ export const categoriesSlice = createSlice({
                     category.widgets.splice(widgetIndex, 1);
                 }
             }
+        },
+        updateCategories: (state, action) => {
+            const {categories} = action.payload;
+            state.value = categories;
         }
     }
 })
 
-export const { addWidget, removeWidget } = categoriesSlice.actions
+export const { addWidget, removeWidget, updateCategories } = categoriesSlice.actions
 
 export default categoriesSlice.reducer

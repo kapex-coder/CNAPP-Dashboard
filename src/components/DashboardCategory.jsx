@@ -5,7 +5,7 @@ import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 
 export default function DashboardCategory({ category = null }) {
   return (
-    <Box sx={{ padding: "1rem 0" }}>
+    <Box sx={{ padding: "1rem 0 0" }}>
       {category && (
         <>
           <Typography

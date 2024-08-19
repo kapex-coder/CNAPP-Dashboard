@@ -1,5 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
-
+import { useSelector } from "react-redux";
 import DashboardCategory from "./DashboardCategory";
 import DashboardOptions from "./DashboardOptions";
 import { Container } from "@mui/material";

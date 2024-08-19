@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Drawer, Stack, Typography } from "@mui/material";
+import { Box, Button, Drawer, Typography } from "@mui/material";
 import CategoryTabs from "../Tabs/CategoryTabs";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";

@@ -7,15 +7,21 @@ const size = {
 };
 
 const defaultChartData = [
-  { value: 2, label: "Connected" },
-  { value: 2, label: "Not Connected" },
+  { id: 1, label: "Connected", value: 2, color: "#03a9f4" },
+  { id: 2, label: "Not Connected", value: 2, color: "#e3f2fd" },
 ];
 
 const NoChartData = () => {
   return (
     <Box
       height={size.height}
-      sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+      sx={{
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}>
       <img
         src={NoGraphDataImage}
         alt="No Graph data"
@@ -23,7 +29,11 @@ const NoChartData = () => {
         style={{ filter: "grayscale(1)" }}
         loading="lazy"
       />
-      <Typography variant="subtitle2" sx={{color: "grey"}}>No Graph data available!</Typography>
+      <Typography
+        variant="subtitle2"
+        sx={{ color: "grey" }}>
+        No Graph data available!
+      </Typography>
     </Box>
   );
 };

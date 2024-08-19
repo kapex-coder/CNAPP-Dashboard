@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import LoopOutlinedIcon from "@mui/icons-material/LoopOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import UpdateWidgetsDrawer from "./Drawers/UpdateWidgetsDrawer";

@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     value: {
-        id: crypto.randomUUID(),
         isActive: true,
         name: "",
         chartData: []
